@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BD82A801C05B3B800000EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */; };
+		9BD82A821C05B3B800000EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A811C05B3B800000EE3 /* ViewController.swift */; };
+		9BD82A851C05B3B800000EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82A831C05B3B800000EE3 /* Main.storyboard */; };
+		9BD82A871C05B3B800000EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82A861C05B3B800000EE3 /* Assets.xcassets */; };
+		9BD82A8A1C05B3B800000EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82A881C05B3B800000EE3 /* LaunchScreen.storyboard */; };
+		9BD82A951C05B3B800000EE3 /* Sony_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A941C05B3B800000EE3 /* Sony_RemoteTests.swift */; };
+		9BD82AA01C05B3B800000EE3 /* Sony_RemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A9F1C05B3B800000EE3 /* Sony_RemoteUITests.swift */; };
+		9BD82AA51C05B3B800000EE3 /* Sony Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9BD82AA41C05B3B800000EE3 /* Sony Remote WatchKit App.app */; };
+		9BD82AAB1C05B3B800000EE3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82AA91C05B3B800000EE3 /* Interface.storyboard */; };
+		9BD82AAD1C05B3B800000EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82AAC1C05B3B800000EE3 /* Assets.xcassets */; };
+		9BD82AB41C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9BD82AB31C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9BD82ABB1C05B3B900000EE3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82ABA1C05B3B900000EE3 /* InterfaceController.swift */; };
+		9BD82ABD1C05B3B900000EE3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82ABC1C05B3B900000EE3 /* ExtensionDelegate.swift */; };
+		9BD82ABF1C05B3B900000EE3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82ABE1C05B3B900000EE3 /* NotificationController.swift */; };
+		9BD82AC11C05B3B900000EE3 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82AC01C05B3B900000EE3 /* GlanceController.swift */; };
+		9BD82AC31C05B3B900000EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82AC21C05B3B900000EE3 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BD82A911C05B3B800000EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BD82A741C05B3B800000EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BD82A7B1C05B3B800000EE3;
+			remoteInfo = "Sony Remote";
+		};
+		9BD82A9C1C05B3B800000EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BD82A741C05B3B800000EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BD82A7B1C05B3B800000EE3;
+			remoteInfo = "Sony Remote";
+		};
+		9BD82AA61C05B3B800000EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BD82A741C05B3B800000EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BD82AA31C05B3B800000EE3;
+			remoteInfo = "Sony Remote WatchKit App";
+		};
+		9BD82AB51C05B3B800000EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BD82A741C05B3B800000EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BD82AB21C05B3B800000EE3;
+			remoteInfo = "Sony Remote WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BD82ACA1C05B3B900000EE3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9BD82AB41C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82ACE1C05B3B900000EE3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9BD82AA51C05B3B800000EE3 /* Sony Remote WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9BD82A7C1C05B3B800000EE3 /* Sony Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sony Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BD82A811C05B3B800000EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BD82A841C05B3B800000EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BD82A861C05B3B800000EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BD82A891C05B3B800000EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BD82A8B1C05B3B800000EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD82A901C05B3B800000EE3 /* Sony RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sony RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD82A941C05B3B800000EE3 /* Sony_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sony_RemoteTests.swift; sourceTree = "<group>"; };
+		9BD82A961C05B3B800000EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD82A9B1C05B3B800000EE3 /* Sony RemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sony RemoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD82A9F1C05B3B800000EE3 /* Sony_RemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sony_RemoteUITests.swift; sourceTree = "<group>"; };
+		9BD82AA11C05B3B800000EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD82AA41C05B3B800000EE3 /* Sony Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sony Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD82AAA1C05B3B800000EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9BD82AAC1C05B3B800000EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BD82AAE1C05B3B800000EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD82AB31C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sony Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD82AB91C05B3B800000EE3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9BD82ABA1C05B3B900000EE3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9BD82ABC1C05B3B900000EE3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9BD82ABE1C05B3B900000EE3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9BD82AC01C05B3B900000EE3 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		9BD82AC21C05B3B900000EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BD82AC41C05B3B900000EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BD82A791C05B3B800000EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A8D1C05B3B800000EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A981C05B3B800000EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82AB01C05B3B800000EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BD82A731C05B3B800000EE3 = {
+			isa = PBXGroup;
+			children = (
+				9BD82A7E1C05B3B800000EE3 /* Sony Remote */,
+				9BD82A931C05B3B800000EE3 /* Sony RemoteTests */,
+				9BD82A9E1C05B3B800000EE3 /* Sony RemoteUITests */,
+				9BD82AA81C05B3B800000EE3 /* Sony Remote WatchKit App */,
+				9BD82AB71C05B3B800000EE3 /* Sony Remote WatchKit Extension */,
+				9BD82A7D1C05B3B800000EE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BD82A7D1C05B3B800000EE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82A7C1C05B3B800000EE3 /* Sony Remote.app */,
+				9BD82A901C05B3B800000EE3 /* Sony RemoteTests.xctest */,
+				9BD82A9B1C05B3B800000EE3 /* Sony RemoteUITests.xctest */,
+				9BD82AA41C05B3B800000EE3 /* Sony Remote WatchKit App.app */,
+				9BD82AB31C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BD82A7E1C05B3B800000EE3 /* Sony Remote */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */,
+				9BD82A811C05B3B800000EE3 /* ViewController.swift */,
+				9BD82A831C05B3B800000EE3 /* Main.storyboard */,
+				9BD82A861C05B3B800000EE3 /* Assets.xcassets */,
+				9BD82A881C05B3B800000EE3 /* LaunchScreen.storyboard */,
+				9BD82A8B1C05B3B800000EE3 /* Info.plist */,
+			);
+			path = "Sony Remote";
+			sourceTree = "<group>";
+		};
+		9BD82A931C05B3B800000EE3 /* Sony RemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82A941C05B3B800000EE3 /* Sony_RemoteTests.swift */,
+				9BD82A961C05B3B800000EE3 /* Info.plist */,
+			);
+			path = "Sony RemoteTests";
+			sourceTree = "<group>";
+		};
+		9BD82A9E1C05B3B800000EE3 /* Sony RemoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82A9F1C05B3B800000EE3 /* Sony_RemoteUITests.swift */,
+				9BD82AA11C05B3B800000EE3 /* Info.plist */,
+			);
+			path = "Sony RemoteUITests";
+			sourceTree = "<group>";
+		};
+		9BD82AA81C05B3B800000EE3 /* Sony Remote WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82AA91C05B3B800000EE3 /* Interface.storyboard */,
+				9BD82AAC1C05B3B800000EE3 /* Assets.xcassets */,
+				9BD82AAE1C05B3B800000EE3 /* Info.plist */,
+			);
+			path = "Sony Remote WatchKit App";
+			sourceTree = "<group>";
+		};
+		9BD82AB71C05B3B800000EE3 /* Sony Remote WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82ABA1C05B3B900000EE3 /* InterfaceController.swift */,
+				9BD82ABC1C05B3B900000EE3 /* ExtensionDelegate.swift */,
+				9BD82ABE1C05B3B900000EE3 /* NotificationController.swift */,
+				9BD82AC01C05B3B900000EE3 /* GlanceController.swift */,
+				9BD82AC21C05B3B900000EE3 /* Assets.xcassets */,
+				9BD82AC41C05B3B900000EE3 /* Info.plist */,
+				9BD82AB81C05B3B800000EE3 /* Supporting Files */,
+			);
+			path = "Sony Remote WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9BD82AB81C05B3B800000EE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BD82AB91C05B3B800000EE3 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BD82A7B1C05B3B800000EE3 /* Sony Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD82ACF1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote" */;
+			buildPhases = (
+				9BD82A781C05B3B800000EE3 /* Sources */,
+				9BD82A791C05B3B800000EE3 /* Frameworks */,
+				9BD82A7A1C05B3B800000EE3 /* Resources */,
+				9BD82ACE1C05B3B900000EE3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BD82AA71C05B3B800000EE3 /* PBXTargetDependency */,
+			);
+			name = "Sony Remote";
+			productName = "Sony Remote";
+			productReference = 9BD82A7C1C05B3B800000EE3 /* Sony Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BD82A8F1C05B3B800000EE3 /* Sony RemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD82AD21C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteTests" */;
+			buildPhases = (
+				9BD82A8C1C05B3B800000EE3 /* Sources */,
+				9BD82A8D1C05B3B800000EE3 /* Frameworks */,
+				9BD82A8E1C05B3B800000EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BD82A921C05B3B800000EE3 /* PBXTargetDependency */,
+			);
+			name = "Sony RemoteTests";
+			productName = "Sony RemoteTests";
+			productReference = 9BD82A901C05B3B800000EE3 /* Sony RemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BD82A9A1C05B3B800000EE3 /* Sony RemoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD82AD51C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteUITests" */;
+			buildPhases = (
+				9BD82A971C05B3B800000EE3 /* Sources */,
+				9BD82A981C05B3B800000EE3 /* Frameworks */,
+				9BD82A991C05B3B800000EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BD82A9D1C05B3B800000EE3 /* PBXTargetDependency */,
+			);
+			name = "Sony RemoteUITests";
+			productName = "Sony RemoteUITests";
+			productReference = 9BD82A9B1C05B3B800000EE3 /* Sony RemoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9BD82AA31C05B3B800000EE3 /* Sony Remote WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD82ACB1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote WatchKit App" */;
+			buildPhases = (
+				9BD82AA21C05B3B800000EE3 /* Resources */,
+				9BD82ACA1C05B3B900000EE3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BD82AB61C05B3B800000EE3 /* PBXTargetDependency */,
+			);
+			name = "Sony Remote WatchKit App";
+			productName = "Sony Remote WatchKit App";
+			productReference = 9BD82AA41C05B3B800000EE3 /* Sony Remote WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9BD82AB21C05B3B800000EE3 /* Sony Remote WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD82AC71C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote WatchKit Extension" */;
+			buildPhases = (
+				9BD82AAF1C05B3B800000EE3 /* Sources */,
+				9BD82AB01C05B3B800000EE3 /* Frameworks */,
+				9BD82AB11C05B3B800000EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sony Remote WatchKit Extension";
+			productName = "Sony Remote WatchKit Extension";
+			productReference = 9BD82AB31C05B3B800000EE3 /* Sony Remote WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BD82A741C05B3B800000EE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Mark Westenberg";
+				TargetAttributes = {
+					9BD82A7B1C05B3B800000EE3 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					9BD82A8F1C05B3B800000EE3 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9BD82A7B1C05B3B800000EE3;
+					};
+					9BD82A9A1C05B3B800000EE3 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9BD82A7B1C05B3B800000EE3;
+					};
+					9BD82AA31C05B3B800000EE3 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					9BD82AB21C05B3B800000EE3 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 9BD82A771C05B3B800000EE3 /* Build configuration list for PBXProject "Sony Remote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BD82A731C05B3B800000EE3;
+			productRefGroup = 9BD82A7D1C05B3B800000EE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BD82A7B1C05B3B800000EE3 /* Sony Remote */,
+				9BD82A8F1C05B3B800000EE3 /* Sony RemoteTests */,
+				9BD82A9A1C05B3B800000EE3 /* Sony RemoteUITests */,
+				9BD82AA31C05B3B800000EE3 /* Sony Remote WatchKit App */,
+				9BD82AB21C05B3B800000EE3 /* Sony Remote WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BD82A7A1C05B3B800000EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82A8A1C05B3B800000EE3 /* LaunchScreen.storyboard in Resources */,
+				9BD82A871C05B3B800000EE3 /* Assets.xcassets in Resources */,
+				9BD82A851C05B3B800000EE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A8E1C05B3B800000EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A991C05B3B800000EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82AA21C05B3B800000EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82AAD1C05B3B800000EE3 /* Assets.xcassets in Resources */,
+				9BD82AAB1C05B3B800000EE3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82AB11C05B3B800000EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82AC31C05B3B900000EE3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BD82A781C05B3B800000EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82A821C05B3B800000EE3 /* ViewController.swift in Sources */,
+				9BD82A801C05B3B800000EE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A8C1C05B3B800000EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82A951C05B3B800000EE3 /* Sony_RemoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82A971C05B3B800000EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82AA01C05B3B800000EE3 /* Sony_RemoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD82AAF1C05B3B800000EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD82ABF1C05B3B900000EE3 /* NotificationController.swift in Sources */,
+				9BD82ABD1C05B3B900000EE3 /* ExtensionDelegate.swift in Sources */,
+				9BD82ABB1C05B3B900000EE3 /* InterfaceController.swift in Sources */,
+				9BD82AC11C05B3B900000EE3 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BD82A921C05B3B800000EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BD82A7B1C05B3B800000EE3 /* Sony Remote */;
+			targetProxy = 9BD82A911C05B3B800000EE3 /* PBXContainerItemProxy */;
+		};
+		9BD82A9D1C05B3B800000EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BD82A7B1C05B3B800000EE3 /* Sony Remote */;
+			targetProxy = 9BD82A9C1C05B3B800000EE3 /* PBXContainerItemProxy */;
+		};
+		9BD82AA71C05B3B800000EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BD82AA31C05B3B800000EE3 /* Sony Remote WatchKit App */;
+			targetProxy = 9BD82AA61C05B3B800000EE3 /* PBXContainerItemProxy */;
+		};
+		9BD82AB61C05B3B800000EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BD82AB21C05B3B800000EE3 /* Sony Remote WatchKit Extension */;
+			targetProxy = 9BD82AB51C05B3B800000EE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BD82A831C05B3B800000EE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD82A841C05B3B800000EE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BD82A881C05B3B800000EE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD82A891C05B3B800000EE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9BD82AA91C05B3B800000EE3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD82AAA1C05B3B800000EE3 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BD82AC51C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BD82AC61C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BD82AC81C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sony Remote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		9BD82AC91C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sony Remote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		9BD82ACC1C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sony_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "Sony Remote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		9BD82ACD1C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sony_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "Sony Remote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		9BD82AD01C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sony Remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9BD82AD11C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sony Remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9BD82AD31C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Sony RemoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-RemoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sony Remote.app/Sony Remote";
+			};
+			name = Debug;
+		};
+		9BD82AD41C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Sony RemoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-RemoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sony Remote.app/Sony Remote";
+			};
+			name = Release;
+		};
+		9BD82AD61C05B3B900000EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sony RemoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-RemoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sony Remote";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9BD82AD71C05B3B900000EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sony RemoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-RemoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sony Remote";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BD82A771C05B3B800000EE3 /* Build configuration list for PBXProject "Sony Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82AC51C05B3B900000EE3 /* Debug */,
+				9BD82AC61C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BD82AC71C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82AC81C05B3B900000EE3 /* Debug */,
+				9BD82AC91C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BD82ACB1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82ACC1C05B3B900000EE3 /* Debug */,
+				9BD82ACD1C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BD82ACF1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82AD01C05B3B900000EE3 /* Debug */,
+				9BD82AD11C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BD82AD21C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82AD31C05B3B900000EE3 /* Debug */,
+				9BD82AD41C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BD82AD51C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD82AD61C05B3B900000EE3 /* Debug */,
+				9BD82AD71C05B3B900000EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BD82A741C05B3B800000EE3 /* Project object */;
+}
