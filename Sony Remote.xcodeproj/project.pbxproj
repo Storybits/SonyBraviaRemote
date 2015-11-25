@@ -145,11 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				9BD82A7E1C05B3B800000EE3 /* Sony Remote */,
-				9BD82A931C05B3B800000EE3 /* Sony RemoteTests */,
-				9BD82A9E1C05B3B800000EE3 /* Sony RemoteUITests */,
 				9BD82AA81C05B3B800000EE3 /* Sony Remote WatchKit App */,
 				9BD82AB71C05B3B800000EE3 /* Sony Remote WatchKit Extension */,
 				9BD82A7D1C05B3B800000EE3 /* Products */,
+				9BD82A931C05B3B800000EE3 /* Sony RemoteTests */,
+				9BD82A9E1C05B3B800000EE3 /* Sony RemoteUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -735,6 +735,7 @@
 				9BD82AC91C05B3B900000EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BD82ACB1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -743,6 +744,7 @@
 				9BD82ACD1C05B3B900000EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BD82ACF1C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony Remote" */ = {
 			isa = XCConfigurationList;
@@ -751,6 +753,7 @@
 				9BD82AD11C05B3B900000EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BD82AD21C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -759,6 +762,7 @@
 				9BD82AD41C05B3B900000EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BD82AD51C05B3B900000EE3 /* Build configuration list for PBXNativeTarget "Sony RemoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -767,6 +771,7 @@
 				9BD82AD71C05B3B900000EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
