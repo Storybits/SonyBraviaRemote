@@ -12,20 +12,73 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    let currentDevice = WKInterfaceDevice.currentDevice()
+    var currentVolume = CGFloat()
+    var volumeBarWidth = CGFloat()
+    var volumeInterval = CGFloat()
+    
+    @IBOutlet var volumeBar: WKInterfaceImage!
+
+
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        volumeBarWidth = currentDevice.screenBounds.width
+        self.setVolume(volumeBarWidth/2)
         
-        // Configure interface objects here.
+        volumeInterval = volumeBarWidth/8
+        
+        
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    func changeVolume(volumeUp volumeUp:Bool) {
+        
+        if volumeUp
+        {
+            //more volume
+            if (currentVolume < volumeBarWidth)
+            {
+                currentVolume+=volumeInterval
+            }
+            
+        }
+        else
+        {
+            //less volume
+            if (currentVolume > 0)
+            {
+                currentVolume-=volumeInterval
+            }
+        }
+        self.setVolume()
+       
+    }
+    
+    func setVolume() {
+        self.setVolume(currentVolume)
+    }
+    
+    func setVolume(volume:CGFloat) {
+        currentVolume = volume
+        self.volumeBar.setWidth(volume)
+    }
+    
+    @IBAction func increaseVolume() {
+        self.changeVolume(volumeUp: true)
+    }
+    
+    @IBAction func decreaseVolume() {
+        self.changeVolume(volumeUp: false)
+    }
+ 
 }

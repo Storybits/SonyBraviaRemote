@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DEFB1A31C074C5000933B06 /* ControlButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFB1A21C074C5000933B06 /* ControlButtons.swift */; };
 		9BD82A801C05B3B800000EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */; };
 		9BD82A821C05B3B800000EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A811C05B3B800000EE3 /* ViewController.swift */; };
 		9BD82A851C05B3B800000EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82A831C05B3B800000EE3 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4DEFB1A21C074C5000933B06 /* ControlButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlButtons.swift; sourceTree = "<group>"; };
 		9BD82A7C1C05B3B800000EE3 /* Sony Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sony Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BD82A811C05B3B800000EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD82ABA1C05B3B900000EE3 /* InterfaceController.swift */,
+				4DEFB1A21C074C5000933B06 /* ControlButtons.swift */,
 				9BD82ABC1C05B3B900000EE3 /* ExtensionDelegate.swift */,
 				9BD82ABE1C05B3B900000EE3 /* NotificationController.swift */,
 				9BD82AC01C05B3B900000EE3 /* GlanceController.swift */,
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEFB1A31C074C5000933B06 /* ControlButtons.swift in Sources */,
 				9BD82ABF1C05B3B900000EE3 /* NotificationController.swift in Sources */,
 				9BD82ABD1C05B3B900000EE3 /* ExtensionDelegate.swift in Sources */,
 				9BD82ABB1C05B3B900000EE3 /* InterfaceController.swift in Sources */,

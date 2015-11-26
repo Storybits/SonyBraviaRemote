@@ -12,10 +12,13 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
+
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        //UITapGestureRecognizer *newTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(myTapMethod)];
+    
     }
 
     override func willActivate() {

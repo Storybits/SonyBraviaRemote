@@ -1,24 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sony_Remote_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="30" alignment="left" layout="vertical" radius="0.0" id="tfN-yE-boa">
+                            <items>
+                                <label width="35" height="22" alignment="left" text="TV" textAlignment="center" id="2Jp-9b-PFH"/>
+                                <imageView width="156" height="4" alignment="left" image="volumebar" id="tcD-EB-y5u">
+                                    <color key="tintColor" red="1" green="0.53319932969999995" blue="0.053697780139999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                            </items>
+                            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="125" height="118" alignment="center" contentMode="scaleAspectFill" layout="vertical" id="TKG-eL-qI9">
+                            <items>
+                                <button width="40" height="40" alignment="center" backgroundImage="pijl-up" id="ekJ-sP-mgF">
+                                    <accessibilityTraits key="accessibilityTraits" button="YES" updatesFrequently="YES"/>
+                                    <connections>
+                                        <action selector="increaseVolume" destination="AgC-eL-Hgc" id="TrR-Oa-BB6"/>
+                                    </connections>
+                                </button>
+                                <button width="40" height="40" alignment="center" backgroundImage="pijl-down" id="6vQ-Sm-vnx">
+                                    <connections>
+                                        <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="YWq-hv-nzS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="volumeBar" destination="tcD-EB-y5u" id="H93-OT-Jh5"/>
+                        <segue destination="hIo-ib-pJg" kind="relationship" relationship="nextPage" id="jcq-rN-udz"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="180" y="342.5"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="Sony_Remote_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" contentMode="top" id="t8f-Gd-c4y">
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group alignment="left" contentMode="scaleAspectFill" layout="vertical" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
@@ -44,9 +79,64 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Sony_Remote_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
+        <!--Control Buttons-->
+        <scene sceneID="Nwk-wp-dro">
+            <objects>
+                <controller id="hIo-ib-pJg" customClass="ControlButtons" customModule="Sony_Remote_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="30" alignment="left" layout="vertical" radius="0.0" id="xew-e3-wFz">
+                            <items>
+                                <label width="69" height="22" alignment="left" text="Control" textAlignment="center" id="aih-U0-eSL"/>
+                            </items>
+                            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="125" height="126" alignment="center" contentMode="scaleAspectFill" layout="vertical" id="rKT-At-uJF">
+                            <items>
+                                <group width="110" height="34" alignment="center" layout="vertical" id="M20-ph-m8S">
+                                    <items>
+                                        <button width="40" height="40" alignment="center" backgroundImage="pijl-up" id="pO4-5d-Eny">
+                                            <connections>
+                                                <action selector="arrowUp" destination="hIo-ib-pJg" id="alM-Ga-S3w"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="34" alignment="center" id="Qb0-yg-Yst">
+                                    <items>
+                                        <button width="40" height="40" alignment="left" backgroundImage="pijl-left" id="AOl-Ix-dec">
+                                            <connections>
+                                                <action selector="arrowleft" destination="hIo-ib-pJg" id="LPw-eu-PBs"/>
+                                            </connections>
+                                        </button>
+                                        <button width="40" height="40" alignment="right" backgroundImage="pijl-right" id="cOL-PL-uI9">
+                                            <connections>
+                                                <action selector="arrowRight" destination="hIo-ib-pJg" id="0OR-8a-0sD"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="110" height="34" alignment="center" id="QQw-zn-oMP">
+                                    <items>
+                                        <button width="40" height="40" alignment="center" backgroundImage="pijl-down" id="n4c-JF-euq">
+                                            <connections>
+                                                <action selector="arrowDown" destination="hIo-ib-pJg" id="Ucg-tV-Dto"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="425" y="346.5"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
