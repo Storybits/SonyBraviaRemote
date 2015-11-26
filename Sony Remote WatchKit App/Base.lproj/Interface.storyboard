@@ -24,12 +24,14 @@
                                 <button width="40" height="40" alignment="center" backgroundImage="pijl-up" id="ekJ-sP-mgF">
                                     <accessibilityTraits key="accessibilityTraits" button="YES" updatesFrequently="YES"/>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="increaseVolume" destination="AgC-eL-Hgc" id="TrR-Oa-BB6"/>
                                     </connections>
                                 </button>
                                 <button width="40" height="40" alignment="center" backgroundImage="pijl-down" id="6vQ-Sm-vnx">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="YWq-hv-nzS"/>
                                     </connections>
@@ -102,6 +104,7 @@
                                     <items>
                                         <button width="40" height="40" alignment="center" backgroundImage="pijl-up" id="pO4-5d-Eny">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="arrowUp" destination="hIo-ib-pJg" id="alM-Ga-S3w"/>
                                             </connections>
@@ -112,12 +115,14 @@
                                     <items>
                                         <button width="40" height="40" alignment="left" backgroundImage="pijl-left" id="AOl-Ix-dec">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="arrowleft" destination="hIo-ib-pJg" id="LPw-eu-PBs"/>
                                             </connections>
                                         </button>
                                         <button width="40" height="40" alignment="right" backgroundImage="pijl-right" id="cOL-PL-uI9">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="arrowRight" destination="hIo-ib-pJg" id="0OR-8a-0sD"/>
                                             </connections>
@@ -128,6 +133,7 @@
                                     <items>
                                         <button width="40" height="40" alignment="center" backgroundImage="pijl-down" id="n4c-JF-euq">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="arrowDown" destination="hIo-ib-pJg" id="Ucg-tV-Dto"/>
                                             </connections>
