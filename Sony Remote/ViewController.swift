@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var tvinit = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,7 +26,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let connector = Connector()
-        connector.initializeTV("")
+        tvinit = true
+        connector.initializeTV("") { (res : Int32) in
+            print(res)
+            if (res == 1) {self.tvinit = false}
+            if (self.tvinit) {return}
+            
+            
+            connector.sendRemoteKey("AAAAAQAAAAEAAAAUAw==");
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {

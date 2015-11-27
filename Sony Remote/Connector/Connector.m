@@ -10,17 +10,40 @@
 
 @implementation Connector
 
-- (NSString *)getJsonRequestFromFunction:(NSString *)function {
+- (NSString *)getJsonRequestFromFunction:(NSString *)function andParams:(NSString *)params {
     _idCounter++;
-    return [NSString stringWithFormat:@"{\"id\" : %d,\"method\" : \"%@\",\"params\" : [],\"version\" : \"%@\"}", _idCounter, function, APIVERSION];
+    
+    return [NSString stringWithFormat:@"{\"id\" : %d,\"method\" : \"%@\",\"params\" : [%@],\"version\" : \"%@\"}", _idCounter, function, params, APIVERSION];
 }
 
 - (void)httpError:(NSError *)error {
-    
+    _completionHandler(NO);
 }
 
 - (void)httpOK:(NSString *)response {
-    NSLog(@"response: %@", response);
+    //try to parse as json
+    if ([response hasPrefix:@"{"]) {
+        NSError *localError = nil;
+        NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&localError];
+        if (localError)
+        {
+            NSLog(@"error: %@", localError.debugDescription);
+            _completionHandler(NO);
+            return;
+        }
+        //yay, we have json
+        if (parsedObject[@"error"] != nil) {
+            _completionHandler(NO);
+            return;
+        }
+        
+    } else {
+        _completionHandler(NO); //no json
+        return;
+        
+    }
+    
+    _completionHandler(YES);
     
 }
 
@@ -55,13 +78,13 @@
         //get authentication cookie (if present)
         for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
             if ([cookie.name isEqualToString:@"auth"]) {
-                NSLog(@"auth: %@", cookie.value);
+                self.authCookie = cookie.value;
             }
         }
         
         if ([s_response hasPrefix:@"{"]) {
             //json response
-            NSLog(@"response: %@", s_response);
+            //NSLog(@"response: %@", s_response);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self httpOK:s_response];
                 });
@@ -77,14 +100,22 @@
 
 }
 
-- (TV *) initializeTV:(NSString *)pin {
+- (void) initializeTV:(NSString *)pin withCompletionHandler:(void(^)(int))handler {
+    _completionHandler = [handler copy];
+    
     _idCounter = 0;
     
-    TV *tv = nil;
+    //Get device info
+//    [self doHTTP:@"/sony/system" withBody:[self getJsonRequestFromFunction:@"getInterfaceInformation" andParams:@""] andPincode:pin];
+
     
-    [self doHTTP:@"/sony/system" withBody:[self getJsonRequestFromFunction:@"getInterfaceInformation"] andPincode:pin];
+    [self doHTTP:@"/sony/accessControl" withBody:[self getJsonRequestFromFunction:@"actRegister" andParams:[NSString stringWithFormat:@"{\"clientid\":\"%@\",\"nickname\":\"%@\"},[{\"value\" : \"no\",\"function\" : \"WOL\"}]", client, nickname]] andPincode:pin];
     
-    return tv;
+}
+
+- (void) sendRemoteKey:(NSString *)key {
+    [self doHTTP:@"/sony/IRCC" withBody:[NSString stringWithFormat:@"<?xml version=\"1.0\"?><s:Envelope xmlns:s=\"http:/schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body><u:X_SendIRCC xmlns:u=\"urn:schemas-sony-com:service:IRCC:1\"><IRCCCode>%@</IRCCCode></u:X_SendIRCC></s:Body></s:Envelope>",key] andPincode:@""];
+    
 }
 
 
