@@ -62,13 +62,13 @@
                                         <button width="1" height="45" alignment="left" id="rQk-Xn-veA">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="increaseVolume" destination="AgC-eL-Hgc" id="u21-jy-HeU"/>
+                                                <action selector="channelUp" destination="AgC-eL-Hgc" id="Hj6-jn-erD"/>
                                             </connections>
                                         </button>
                                         <button width="1" height="45" alignment="left" verticalAlignment="bottom" id="awQ-Oq-VRj">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="z0u-yC-kRm"/>
+                                                <action selector="channelDown" destination="AgC-eL-Hgc" id="a08-2J-jKX"/>
                                             </connections>
                                         </button>
                                     </items>

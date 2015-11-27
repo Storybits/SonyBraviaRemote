@@ -108,5 +108,15 @@ class InterfaceController: WKInterfaceController {
         connectTV.sendRemoteKey("AAAAAQAAAAEAAAAvAw==")
     }
     
+    @IBAction func channelUp() {
+        
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAAQAw==")
+    }
+    @IBAction func channelDown() {
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAARAw==")
+    
+    }
+    
+    
     
 }
