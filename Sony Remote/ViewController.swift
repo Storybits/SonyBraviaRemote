@@ -11,7 +11,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var tvinit = false
+    var tvinit : Bool = false
+    var textField : UITextField!
+    
+    func inittv(pin : String) {
+        let connector = Connector()
+        tvinit = true
+        connector.initializeTV(pin) { (res : Int32) in
+            print(res)
+            if (res == 0) {
+                var alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.addTextFieldWithConfigurationHandler(self.configurationTextField)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
+                    //ok clicked
+                    self.inittv(self.textField.text!)
+                }))
+                self.presentViewController(alert, animated: true, completion: {
+                    
+                })
+                return
+            }
+            if (res == 1) {self.tvinit = false}
+            if (self.tvinit) {return}
+            
+            
+            connector.sendRemoteKey("AAAAAQAAAAEAAAAUAw==");
+        }
+        
+    }
+    
+    func configurationTextField(textField: UITextField!)
+    {
+        if let tField = textField {
+            
+            self.textField = textField!        //Save reference to the UITextField
+            self.textField.text = "Enter pin"
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +65,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         
-        let connector = Connector()
-        tvinit = true
-        connector.initializeTV("") { (res : Int32) in
-            print(res)
-            if (res == 1) {self.tvinit = false}
-            if (self.tvinit) {return}
-            
-            
-            connector.sendRemoteKey("AAAAAQAAAAEAAAAUAw==");
-        }
+        
     
     }
 
