@@ -19,6 +19,6 @@
 @property (nonatomic, strong) NSString          *authCookie;
 
 //Geeft NIL terug als niet geautoriseerd. Dan nog een x aanroepen met pincode gevuld.
-- (TV *) initializeTV:(NSString *)ip withPincode:(NSString *)pin;
+- (TV *) initializeTV:(NSString *)pin;
 
 @end

@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         
-       // let
+        let connector = Connector()
+        connector.initializeTV("")
     }
 
     override func didReceiveMemoryWarning() {

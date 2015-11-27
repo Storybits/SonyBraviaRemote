@@ -51,7 +51,14 @@
                                         
         //post went OK
         NSString *s_response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                        
+        
+        //get authentication cookie (if present)
+        for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+            if ([cookie.name isEqualToString:@"auth"]) {
+                NSLog(@"auth: %@", cookie.value);
+            }
+        }
+        
         if ([s_response hasPrefix:@"{"]) {
             //json response
             NSLog(@"response: %@", s_response);
