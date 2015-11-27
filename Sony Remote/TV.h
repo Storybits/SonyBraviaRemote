@@ -10,4 +10,10 @@
 
 @interface TV : NSObject
 
+@property (nonatomic, strong)   NSString    *interfaceVersion;
+@property (nonatomic, strong)   NSString    *modelName;
+@property (nonatomic, strong)   NSString    *productCategory;
+@property (nonatomic, strong)   NSString    *productName;
+
+
 @end
