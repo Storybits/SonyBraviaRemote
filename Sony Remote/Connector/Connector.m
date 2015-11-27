@@ -36,8 +36,8 @@
     NSData *authData = [[NSString stringWithFormat:@"%@:%@", @"", pin] dataUsingEncoding:NSUTF8StringEncoding];
     [urlRequest setValue:[NSString stringWithFormat:@"Basic %@",[authData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed]] forHTTPHeaderField:@"Authorization"];
     
-    [[NSURLSession sharedSession] dataTaskWithRequest:urlRequest
-                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *connectionError)
+    NSURLSessionDataTask * dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:urlRequest
+                                    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable connectionError)
     {
                                         
         if (connectionError || !data) {
@@ -72,6 +72,8 @@
                                                                        
                                                                    
              }];
+    
+    [dataTask resume];
 
 }
 
