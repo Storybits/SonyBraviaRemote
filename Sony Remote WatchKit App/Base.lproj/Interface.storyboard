@@ -19,27 +19,59 @@
                             </items>
                             <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         </group>
-                        <group width="125" height="118" alignment="center" contentMode="scaleAspectFill" layout="vertical" id="TKG-eL-qI9">
+                        <group width="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="TKG-eL-qI9">
                             <items>
-                                <button width="40" height="40" alignment="center" backgroundImage="pijl-up" id="ekJ-sP-mgF">
-                                    <accessibilityTraits key="accessibilityTraits" button="YES" updatesFrequently="YES"/>
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <action selector="increaseVolume" destination="AgC-eL-Hgc" id="TrR-Oa-BB6"/>
-                                    </connections>
-                                </button>
-                                <button width="40" height="40" alignment="center" backgroundImage="pijl-down" id="6vQ-Sm-vnx">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="YWq-hv-nzS"/>
-                                    </connections>
-                                </button>
+                                <group width="44" height="123" alignment="left" backgroundImage="volumebuttons" layout="vertical" id="lsZ-eE-HOJ">
+                                    <items>
+                                        <button width="1" height="45" alignment="left" id="TUx-4V-JCJ">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="increaseVolume" destination="AgC-eL-Hgc" id="NO9-bq-iuq"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" height="45" alignment="left" verticalAlignment="bottom" id="LPf-IA-x0i">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="Sfr-Qy-jOm"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="42" height="99" alignment="center" layout="vertical" id="lg1-iC-ieA">
+                                    <items>
+                                        <button width="40" height="40" alignment="center" backgroundImage="power" id="Uln-av-Cqv">
+                                            <accessibilityTraits key="accessibilityTraits" button="YES" updatesFrequently="YES"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </button>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="bottom" backgroundImage="mute" id="kJz-Wf-NZa">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                                </group>
+                                <group width="44" height="123" alignment="right" backgroundImage="channelbuttons" layout="vertical" id="7wd-mR-0Nz">
+                                    <items>
+                                        <button width="1" height="45" alignment="left" id="rQk-Xn-veA">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="increaseVolume" destination="AgC-eL-Hgc" id="u21-jy-HeU"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" height="45" alignment="left" verticalAlignment="bottom" id="awQ-Oq-VRj">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="decreaseVolume" destination="AgC-eL-Hgc" id="z0u-yC-kRm"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
+                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
-                    <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.22201759308461544" green="0.22201759308461544" blue="0.22201759308461544" alpha="1" colorSpace="calibratedRGB"/>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
                         <outlet property="volumeBar" destination="tcD-EB-y5u" id="H93-OT-Jh5"/>
@@ -47,7 +79,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="180" y="342.5"/>
+            <point key="canvasLocation" x="182" y="310"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
