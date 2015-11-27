@@ -61,7 +61,7 @@
         
         if ([s_response hasPrefix:@"{"]) {
             //json response
-            NSLog(@"response: %@", s_response);
+            //NSLog(@"response: %@", s_response);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self httpOK:s_response];
                 });
