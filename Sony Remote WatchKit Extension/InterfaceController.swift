@@ -28,8 +28,8 @@ class InterfaceController: WKInterfaceController {
         
         volumeInterval = volumeBarWidth/8
         
-    
-        
+        let connectTV = Connect()
+        connectTV.initializeTV("")
     }
     
     override func willActivate() {
