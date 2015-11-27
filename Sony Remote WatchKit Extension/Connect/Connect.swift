@@ -11,6 +11,8 @@ import WatchKit
 
 var TV_IP: String = "192.168.1.30"
 var API_VERSION: String = "1.0"
+var NICKNAME: String = "Macbook OSX"
+var CLIENT: String = "MacOSX:5EF3FF8C-1EB0-4E1D-B53C-038969B6BC7F"
 
 class Connect {
     
@@ -28,14 +30,14 @@ class Connect {
     }
     
     func initializeTV(pin: String) {
-        self.httpCall("/sony/system", body: self.getJsonMethod("getInterfaceInformation"), pin: pin)
-        
+       // self.httpCall("/sony/accessControl", body: self.getJsonMethod("actRegister"), pin: pin)
+        self.httpCall("/sony/accessControl", body: self.getJsonMethod("actRegister", params: "{\"clientid\":\"\(CLIENT)\",\"nickname\":\"\(NICKNAME)\"},[{\"value\" : \"no\",\"function\" : \"WOL\"}]"), pin: pin)
     }
     
     
-    func getJsonMethod(method: String) -> String {
+    func getJsonMethod(method: String, params: String) -> String {
         id_counter++
-        return "{\"id\" : \(id_counter),\"method\" : \"\(method)\",\"params\" : [],\"version\" : \"\(API_VERSION)\"}"
+        return "{\"id\" : \(id_counter),\"method\" : \"\(method)\",\"params\" : [\(params)],\"version\" : \"\(API_VERSION)\"}"
         
     }
     
@@ -87,17 +89,21 @@ class Connect {
                     
                 }
                 
-                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as AnyObject?
+                if dataStr.hasPrefix("{")
+                {
                 
-                if (jsonData == nil)
-                {
+                    let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as AnyObject?
                     
-                    throw JSONError.ConversionFailed
-                    
-                }
-                else
-                {
-                    self.httpResponse(jsonData!)
+                    if (jsonData == nil)
+                    {
+                        
+                        throw JSONError.ConversionFailed
+                        
+                    }
+                    else
+                    {
+                        self.httpResponse(jsonData!)
+                    }
                 }
                 
             } catch let error as JSONError {

@@ -43,10 +43,16 @@
                                             <accessibilityTraits key="accessibilityTraits" button="YES" updatesFrequently="YES"/>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="powerOff" destination="AgC-eL-Hgc" id="EnE-og-3ZA"/>
+                                            </connections>
                                         </button>
-                                        <button width="30" height="30" alignment="center" verticalAlignment="bottom" backgroundImage="mute" id="kJz-Wf-NZa">
+                                        <button width="30" height="30" alignment="center" verticalAlignment="bottom" backgroundImage="unmute" id="kJz-Wf-NZa">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="muteSound" destination="AgC-eL-Hgc" id="LGT-D9-WBN"/>
+                                            </connections>
                                         </button>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
@@ -74,6 +80,7 @@
                     <color key="backgroundColor" red="0.22201759308461544" green="0.22201759308461544" blue="0.22201759308461544" alpha="1" colorSpace="calibratedRGB"/>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
+                        <outlet property="muteButton" destination="kJz-Wf-NZa" id="GAN-9d-hFZ"/>
                         <outlet property="volumeBar" destination="tcD-EB-y5u" id="H93-OT-Jh5"/>
                         <segue destination="hIo-ib-pJg" kind="relationship" relationship="nextPage" id="jcq-rN-udz"/>
                     </connections>

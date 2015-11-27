@@ -15,7 +15,7 @@
 }
 
 #define APIVERSION  @"1.0"
-#define tv_ip       @"192.168.1.115"
+#define tv_ip       @"192.168.1.30"
 #define client      @"MacOSX:5EF3FF8C-1EB0-4E1D-B53C-038969B6BC7F"
 #define nickname    @"Macbook OSX"
 
