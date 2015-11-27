@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4DEFB1A31C074C5000933B06 /* ControlButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFB1A21C074C5000933B06 /* ControlButtons.swift */; };
+		80B352DA1C089FB40055A230 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B352D91C089FB40055A230 /* Connector.m */; };
+		80B352DB1C089FB40055A230 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B352D91C089FB40055A230 /* Connector.m */; };
+		80B352E01C08A2AB0055A230 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B352DF1C08A2AB0055A230 /* TV.m */; };
+		80B352E11C08A2AB0055A230 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B352DF1C08A2AB0055A230 /* TV.m */; };
 		9BD82A801C05B3B800000EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */; };
 		9BD82A821C05B3B800000EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD82A811C05B3B800000EE3 /* ViewController.swift */; };
 		9BD82A851C05B3B800000EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD82A831C05B3B800000EE3 /* Main.storyboard */; };
@@ -84,6 +88,12 @@
 
 /* Begin PBXFileReference section */
 		4DEFB1A21C074C5000933B06 /* ControlButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlButtons.swift; sourceTree = "<group>"; };
+		80B352D61C089FB40055A230 /* Sony Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sony Remote-Bridging-Header.h"; sourceTree = "<group>"; };
+		80B352D71C089FB40055A230 /* Sony Remote WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sony Remote WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		80B352D81C089FB40055A230 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connector.h; path = Connector/Connector.h; sourceTree = "<group>"; };
+		80B352D91C089FB40055A230 /* Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connector.m; path = Connector/Connector.m; sourceTree = "<group>"; };
+		80B352DE1C08A2AB0055A230 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
+		80B352DF1C08A2AB0055A230 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
 		9BD82A7C1C05B3B800000EE3 /* Sony Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sony Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BD82A811C05B3B800000EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +153,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80B352DC1C089FC00055A230 /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				80B352D81C089FB40055A230 /* Connector.h */,
+				80B352D91C089FB40055A230 /* Connector.m */,
+			);
+			name = Connector;
+			sourceTree = "<group>";
+		};
+		80B352DD1C08A2880055A230 /* tvStruct */ = {
+			isa = PBXGroup;
+			children = (
+				80B352DE1C08A2AB0055A230 /* TV.h */,
+				80B352DF1C08A2AB0055A230 /* TV.m */,
+			);
+			name = tvStruct;
+			sourceTree = "<group>";
+		};
+		80B352E21C08A2B90055A230 /* SwiftBrigde */ = {
+			isa = PBXGroup;
+			children = (
+				80B352D61C089FB40055A230 /* Sony Remote-Bridging-Header.h */,
+				80B352D71C089FB40055A230 /* Sony Remote WatchKit Extension-Bridging-Header.h */,
+			);
+			name = SwiftBrigde;
+			sourceTree = "<group>";
+		};
 		9BD82A731C05B3B800000EE3 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +207,9 @@
 		9BD82A7E1C05B3B800000EE3 /* Sony Remote */ = {
 			isa = PBXGroup;
 			children = (
+				80B352E21C08A2B90055A230 /* SwiftBrigde */,
+				80B352DD1C08A2880055A230 /* tvStruct */,
+				80B352DC1C089FC00055A230 /* Connector */,
 				9BD82A7F1C05B3B800000EE3 /* AppDelegate.swift */,
 				9BD82A811C05B3B800000EE3 /* ViewController.swift */,
 				9BD82A831C05B3B800000EE3 /* Main.storyboard */,
@@ -424,6 +464,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BD82A821C05B3B800000EE3 /* ViewController.swift in Sources */,
+				80B352E01C08A2AB0055A230 /* TV.m in Sources */,
+				80B352DA1C089FB40055A230 /* Connector.m in Sources */,
 				9BD82A801C05B3B800000EE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +491,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEFB1A31C074C5000933B06 /* ControlButtons.swift in Sources */,
+				80B352DB1C089FB40055A230 /* Connector.m in Sources */,
+				80B352E11C08A2AB0055A230 /* TV.m in Sources */,
 				9BD82ABF1C05B3B900000EE3 /* NotificationController.swift in Sources */,
 				9BD82ABD1C05B3B900000EE3 /* ExtensionDelegate.swift in Sources */,
 				9BD82ABB1C05B3B900000EE3 /* InterfaceController.swift in Sources */,
@@ -593,12 +637,15 @@
 		9BD82AC81C05B3B900000EE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sony Remote WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sony Remote/Sony Remote WatchKit Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -607,12 +654,14 @@
 		9BD82AC91C05B3B900000EE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sony Remote WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sony Remote/Sony Remote WatchKit Extension-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -654,10 +703,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sony Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sony Remote/Sony Remote-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -665,10 +717,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sony Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalmedia.Sony-Remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sony Remote/Sony Remote-Bridging-Header.h";
 			};
 			name = Release;
 		};

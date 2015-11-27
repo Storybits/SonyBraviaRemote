@@ -28,6 +28,7 @@ class InterfaceController: WKInterfaceController {
         
         volumeInterval = volumeBarWidth/8
         
+    
         
     }
     
