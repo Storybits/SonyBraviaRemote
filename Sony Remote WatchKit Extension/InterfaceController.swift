@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
     var currentVolume = CGFloat()
     var volumeBarWidth = CGFloat()
     var volumeInterval = CGFloat()
+    let connectTV = Connect()
     
     @IBOutlet var volumeBar: WKInterfaceImage!
 
@@ -28,7 +29,7 @@ class InterfaceController: WKInterfaceController {
         
         volumeInterval = volumeBarWidth/8
         
-        let connectTV = Connect()
+        
         connectTV.initializeTV("")
     }
     
@@ -76,10 +77,12 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func increaseVolume() {
         self.changeVolume(volumeUp: true)
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAASAw==")
     }
     
     @IBAction func decreaseVolume() {
         self.changeVolume(volumeUp: false)
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAATAw==")
     }
  
 }

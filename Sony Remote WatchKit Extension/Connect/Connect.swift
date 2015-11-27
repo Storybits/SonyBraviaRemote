@@ -15,6 +15,7 @@ var API_VERSION: String = "1.0"
 class Connect {
     
     var id_counter: Int = 0
+    var authCookie: String
     
     enum JSONError: String, ErrorType {
         case NoData = "ERROR: no data"
@@ -22,12 +23,12 @@ class Connect {
     }
     
     init(){
-        
+        self.authCookie = ""
         
     }
     
     func initializeTV(pin: String) {
-        self.httpCall("http://\(TV_IP)/sony/system", body: self.getJsonMethod("getInterfaceInformation"), pin: pin)
+        self.httpCall("/sony/system", body: self.getJsonMethod("getInterfaceInformation"), pin: pin)
         
     }
     
@@ -41,7 +42,7 @@ class Connect {
     
     func httpCall(urlPath: String, body: String, var pin: String) {
         
-        let url : NSURL = NSURL(string: urlPath)!
+        let url : NSURL = NSURL(string: "http://\(TV_IP)\(urlPath)")!
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
         let request = NSMutableURLRequest(URL: url)
@@ -68,6 +69,22 @@ class Connect {
                 if data == nil
                 {
                     throw JSONError.NoData
+                }
+                
+                
+                //we have a response
+                let dataStr:NSString = NSString(data: data!, encoding: NSASCIIStringEncoding)!
+                print(dataStr)
+                
+                let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+                let cookies = cookieStorage.cookies! as [NSHTTPCookie]
+                for cookie in cookies {
+                    if cookie.name == "auth"
+                    {
+                        self.authCookie = cookie.value
+                        print(self.authCookie)
+                    }
+                    
                 }
                 
                 let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as AnyObject?
@@ -101,5 +118,14 @@ class Connect {
         
     }
     
+    
+    
+    func sendRemoteKey(key:String) {
+        let body = "<?xml version=\"1.0\"?><s:Envelope xmlns:s=\"http:/schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body><u:X_SendIRCC xmlns:u=\"urn:schemas-sony-com:service:IRCC:1\"><IRCCCode>\(key)</IRCCCode></u:X_SendIRCC></s:Body></s:Envelope>"
+        
+        
+        self.httpCall("/sony/IRCC", body: body, pin: "")
+        
+    }
     
 }
