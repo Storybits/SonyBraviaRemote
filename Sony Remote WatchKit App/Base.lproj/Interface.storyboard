@@ -19,7 +19,7 @@
                             </items>
                             <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         </group>
-                        <group width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="TKG-eL-qI9">
+                        <group width="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="TKG-eL-qI9">
                             <items>
                                 <group width="44" height="123" alignment="left" backgroundImage="volumebuttons" layout="vertical" id="lsZ-eE-HOJ">
                                     <items>
