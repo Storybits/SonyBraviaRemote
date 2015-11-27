@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -17,6 +18,12 @@ class ViewController: UIViewController {
         
         
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidLoad()
+        
+       // let
     }
 
     override func didReceiveMemoryWarning() {
