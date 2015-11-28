@@ -27,6 +27,7 @@
         NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&localError];
         if (localError)
         {
+            //json error message returned
             NSLog(@"error: %@", localError.debugDescription);
             _completionHandler(NO);
             return;
