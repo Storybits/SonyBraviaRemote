@@ -23,7 +23,6 @@
 @property (nonatomic, strong) TV                *tv;
 @property (nonatomic, strong) NSString          *authCookie;
 
-//Geeft NIL terug als niet geautoriseerd. Dan nog een x aanroepen met pincode gevuld.
 - (void) initializeTV:(NSString *)pin withCompletionHandler:(void(^)(int))handler;
 - (void) sendRemoteKey:(NSString *)key;
 
