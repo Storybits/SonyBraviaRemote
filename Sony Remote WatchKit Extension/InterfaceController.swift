@@ -16,8 +16,11 @@ class InterfaceController: WKInterfaceController {
     var currentVolume = CGFloat()
     var volumeBarWidth = CGFloat()
     var volumeInterval = CGFloat()
+    var muted: Bool = false
+    let connectTV = Connect()
     
     @IBOutlet var volumeBar: WKInterfaceImage!
+    @IBOutlet var muteButton: WKInterfaceButton!
 
 
     
@@ -28,8 +31,8 @@ class InterfaceController: WKInterfaceController {
         
         volumeInterval = volumeBarWidth/8
         
-    
         
+        connectTV.initializeTV("")
     }
     
     override func willActivate() {
@@ -76,10 +79,44 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func increaseVolume() {
         self.changeVolume(volumeUp: true)
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAASAw==")
     }
     
     @IBAction func decreaseVolume() {
         self.changeVolume(volumeUp: false)
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAATAw==")
     }
  
+    @IBAction func muteSound() {
+        if self.muted
+        {
+            self.muted = false
+            self.muteButton.setBackgroundImage(UIImage(named: "unmute"))
+        }
+        else
+        {
+            self.muted = true
+            self.muteButton.setBackgroundImage(UIImage(named: "mute"))
+        }
+        
+        
+       connectTV.sendRemoteKey("AAAAAQAAAAEAAAAUAw==")
+    }
+    
+    @IBAction func powerOff() {
+        
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAAvAw==")
+    }
+    
+    @IBAction func channelUp() {
+        
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAAQAw==")
+    }
+    @IBAction func channelDown() {
+        connectTV.sendRemoteKey("AAAAAQAAAAEAAAARAw==")
+    
+    }
+    
+    
+    
 }
