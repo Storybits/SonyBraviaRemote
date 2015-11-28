@@ -76,7 +76,7 @@ class Connect {
                 
                 //we have a response
                 let dataStr:NSString = NSString(data: data!, encoding: NSASCIIStringEncoding)!
-                print(dataStr)
+                //print(dataStr)
                 
                 let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
                 let cookies = cookieStorage.cookies! as [NSHTTPCookie]
@@ -89,7 +89,7 @@ class Connect {
                     
                 }
                 
-                if dataStr.hasPrefix("{")
+                if NSJSONSerialization.isValidJSONObject(data!)
                 {
                 
                     let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as AnyObject?
