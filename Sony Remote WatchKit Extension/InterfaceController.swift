@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, ConnectDelegate {
 
     let currentDevice = WKInterfaceDevice.currentDevice()
     var currentVolume = CGFloat()
@@ -18,6 +18,7 @@ class InterfaceController: WKInterfaceController {
     var volumeInterval = CGFloat()
     var muted: Bool = false
     let connectTV = Connect()
+    var tvInit: Bool = false
     
     @IBOutlet var volumeBar: WKInterfaceImage!
     @IBOutlet var muteButton: WKInterfaceButton!
@@ -43,6 +44,12 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    //delegate method
+    func httpResponse(jsonData: AnyObject) {
+        self.tvInit = true
+        print("connectie met tv")
     }
     
     func changeVolume(volumeUp volumeUp:Bool) {

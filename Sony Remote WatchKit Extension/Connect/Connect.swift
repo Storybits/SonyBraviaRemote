@@ -14,10 +14,19 @@ var API_VERSION: String = "1.0"
 var NICKNAME: String = "Macbook OSX"
 var CLIENT: String = "MacOSX:5EF3FF8C-1EB0-4E1D-B53C-038969B6BC7F"
 
+
+protocol ConnectDelegate {
+    
+    func httpResponse(jsonData: AnyObject)
+    
+}
+
 class Connect {
     
     var id_counter: Int = 0
     var authCookie: String
+    var delegate: ConnectDelegate! = nil
+    
     
     enum JSONError: String, ErrorType {
         case NoData = "ERROR: no data"
@@ -75,7 +84,7 @@ class Connect {
                 
                 
                 //we have a response
-                let dataStr:NSString = NSString(data: data!, encoding: NSASCIIStringEncoding)!
+                //let dataStr:NSString = NSString(data: data!, encoding: NSASCIIStringEncoding)!
                 //print(dataStr)
                 
                 let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
@@ -92,6 +101,7 @@ class Connect {
                 if NSJSONSerialization.isValidJSONObject(data!)
                 {
                 
+                    
                     let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as AnyObject?
                     
                     if (jsonData == nil)
@@ -102,8 +112,12 @@ class Connect {
                     }
                     else
                     {
-                        self.httpResponse(jsonData!)
+                        self.delegate.httpResponse(jsonData!)
                     }
+                }
+                else
+                {
+                    //print(dataStr)
                 }
                 
             } catch let error as JSONError {
@@ -118,11 +132,6 @@ class Connect {
         
     }
     
-    func httpResponse(jsonData:AnyObject) {
-        print(jsonData)
-        
-        
-    }
     
     
     

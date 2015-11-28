@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         connector.initializeTV(pin) { (res : Int32) in
             print(res)
             if (res == 0) {
-                var alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 alert.addTextFieldWithConfigurationHandler(self.configurationTextField)
                 
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     func configurationTextField(textField: UITextField!)
     {
-        if let tField = textField {
+        if let _ = textField {
             
             self.textField = textField!        //Save reference to the UITextField
             self.textField.text = "Enter pin"
